@@ -12,9 +12,15 @@ public class Umein extends Application {
 	public static void main(String[] args) {
 		launch(args);
 	}
+
+	public Stage stage;
+
 	@Override
 	public void start(Stage primaryStage) {
 		try {
+
+			this.stage = stage;
+
 	        // FXMLのレイアウトをロード
 	        Parent root = FXMLLoader.load(getClass().getResource(getClass().getSimpleName() + ".fxml"));
 

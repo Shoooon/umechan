@@ -12,7 +12,7 @@
       <Label fx:id="lbLevel" layoutX="44.0" layoutY="58.0" prefHeight="27.0" prefWidth="76.0" text="ウメモトレベル" />
       <ChoiceBox fx:id="cbLevel" layoutX="120.0" layoutY="61.0" prefWidth="150.0" />
       <Label fx:id="lbSodanNaiyo" layoutX="44.0" layoutY="110.0" prefHeight="30.0" prefWidth="88.0" text="相談内容" />
-      <Button fx:id="btnSodan" layoutX="44.0" layoutY="276.0" mnemonicParsing="false" prefHeight="72.0" prefWidth="515.0" text="相談" />
+      <Button fx:id="btnSodan" layoutX="44.0" layoutY="276.0" mnemonicParsing="false" prefHeight="72.0" prefWidth="515.0" text="相談" onAction="#onClickSodan"/>
       <TextArea fx:id="txtAreaSodanNaiyo" layoutX="44.0" layoutY="140.0" prefHeight="122.0" prefWidth="515.0" />
    </children>
 </AnchorPane>
