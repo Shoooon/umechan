@@ -69,7 +69,7 @@ public class Controller implements Initializable{
 
         	// ダイアログを生成＆設定
         	Alert dialog = new Alert(AlertType.INFORMATION);
-        	dialog.setHeaderText(null);
+        	dialog.setHeaderText("ウメモトレベル："+ getCbLevel().getValue());
         	dialog.setTitle("ウメモトアンサー");
         	dialog.setContentText(naiyo+ System.lineSeparator() +"→それは悪だよねぇ！？");
 
