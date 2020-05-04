@@ -1,98 +1,110 @@
 package ctrl;
-
 import java.net.URL;
 import java.util.ResourceBundle;
 
-import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.ChoiceBox;
-import javafx.scene.control.TextField;
+import javafx.scene.control.Label;
+import javafx.scene.control.TextArea;
+import javafx.scene.layout.AnchorPane;
 
-/***********************************************
- * 画面のコントローラー
- * @author tarosa0001
- ***********************************************/
-public class Controller implements Initializable {
-    /** ドロップダウン */
-    @FXML
-    private ChoiceBox<String> dropDown;
+public class Controller implements Initializable{
 
-    /** テキストフィールド */
-    @FXML
-    private TextField textBox;
+        /** パネル：メイン */
+        @FXML
+        private AnchorPane mainPane;
 
-    /** ボタン */
-    @FXML
-    private Button button;
+        /** ラベル：相談内容 */
+        @FXML
+        private Label lbSodanNaiyo;
 
-    /** ************************************************************
-     * 初期化処理
-     * 画面表示時に行いたい処理を実装する。
-     * @param location
-     * @param resources
-     * *************************************************************/
-    @Override
-    public void initialize(URL location, ResourceBundle resources) {
-        // 何もしない
-    }
+        /** テキストフィールド：相談内容 */
+        @FXML
+        private TextArea txtAreaSodanNaiyo;
 
-    /** ************************************************************
-     * ボタン押下時のアクション
-     * @param event イベント
-     * *************************************************************/
-    @FXML
-    public void onClick(ActionEvent event) {
-        // テキストボックスに文字列をセットする
-        textBox.setText("ボタンを押しました。");
-    }
+        /** ラベル：ウメモトレベル */
+        @FXML
+        private Label lbLevel;
 
-    /** ************************************************************
-     * ツールタイプ選択ドロップダウンを取得します。
-     * @return ツールタイプ選択ドロップダウン
-     * *************************************************************/
-    public ChoiceBox<String> getToolType() {
-        return dropDown;
-    }
+        /** コンボボックス：ウメモトレベル */
+        @FXML
+        private ChoiceBox<String> cbLevel;
 
-    /** ************************************************************
-     * ツールタイプ選択ドロップダウンを設定します。
-     * @param toolType ツールタイプ選択ドロップダウン
-     * ************************************************************/
-    public void setToolType(ChoiceBox<String> toolType) {
-        this.dropDown = toolType;
-    }
+        /** ボタン：相談 */
+        @FXML
+        private Button btnSodan;
 
-    /** ************************************************************
-     * 入力ファイル名テキストフィールドを取得します。
-     * @return 入力ファイル名テキストフィールド
-     * ************************************************************/
-    public TextField getInputFile() {
-        return textBox;
-    }
+        /*
+         * (非 Javadoc)
+         * @see javafx.fxml.Initializable#initialize(java.net.URL, java.util.ResourceBundle)
+         */
+        @Override
+        public void initialize(URL location, ResourceBundle resources) {
 
-    /** ************************************************************
-     * 入力ファイル名テキストフィールドを設定します。
-     * @param inputFile 入力ファイル名テキストフィールド
-     * ************************************************************/
-    public void setInputFile(TextField textBox) {
-        this.textBox = textBox;
-    }
+        	// コンボボックスに項目を追加
+        	cbLevel.getItems().add("低");
+        	cbLevel.getItems().add("中");
+        	cbLevel.getItems().add("高");
 
-    /** ************************************************************
-     * 参照ボタンを取得します。
-     * @return 参照ボタン
-     * ************************************************************/
-    public Button getReference() {
-        return button;
-    }
+        	// 初期選択状態を設定
+        	cbLevel.getSelectionModel().select(0);
 
-    /** ************************************************************
-     * 参照ボタンを設定します。
-     * @param reference 参照ボタン
-     * ************************************************************/
-    public void setReference(Button button) {
-        this.button = button;
-    }
+        }
+
+        /**
+         * @return mainPane
+         */
+        public AnchorPane getMainPane() {
+                return mainPane;
+        }
+
+        /**
+         * @param mainPane セットする mainPane
+         */
+        public void setMainPane(AnchorPane mainPane) {
+                this.mainPane = mainPane;
+        }
+
+		public Label getLbSodanNaiyo() {
+			return lbSodanNaiyo;
+		}
+
+		public void setLbSodanNaiyo(Label lbSodanNaiyo) {
+			this.lbSodanNaiyo = lbSodanNaiyo;
+		}
+
+		public TextArea getTxtAreaSodanNaiyo() {
+			return txtAreaSodanNaiyo;
+		}
+
+		public void setTxtAreaSodanNaiyo(TextArea txtAreaSodanNaiyo) {
+			this.txtAreaSodanNaiyo = txtAreaSodanNaiyo;
+		}
+
+		public Label getLbLevel() {
+			return lbLevel;
+		}
+
+		public void setLbLevel(Label lbLevel) {
+			this.lbLevel = lbLevel;
+		}
+
+		public ChoiceBox<String> getCbLevel() {
+			return cbLevel;
+		}
+
+		public void setCbLevel(ChoiceBox<String> cbLevel) {
+			this.cbLevel = cbLevel;
+		}
+
+		public Button getBtnSodan() {
+			return btnSodan;
+		}
+
+		public void setBtnSodan(Button btnSodan) {
+			this.btnSodan = btnSodan;
+		}
+
 }

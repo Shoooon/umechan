@@ -4,18 +4,15 @@
 <?import javafx.scene.control.ChoiceBox?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextArea?>
-<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.AnchorPane?>
 
 
-<Pane fx:id="mainPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
-	xmlns="http://javafx.com/javafx/8.0.111"
-	xmlns:fx="http://javafx.com/fxml/1"
-	fx:controller="ctrl.Controller"><!-- コントローラクラスと紐付 -->
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ctrl.Controller">
    <children>
-      <Label fx:id="lbSodanNaiyo" layoutX="53.0" layoutY="103.0" prefHeight="30.0" prefWidth="88.0" text="相談内容" />
-      <Button fx:id="btnSodan" layoutX="53.0" layoutY="278.0" mnemonicParsing="false" prefHeight="95.0" prefWidth="496.0" text="相談" />
-      <TextArea fx:id="txtAreaSodanNaiyo" layoutX="53.0" layoutY="136.0" prefHeight="124.0" prefWidth="495.0" />
-      <ChoiceBox fx:id="cbLevel" layoutX="129.0" layoutY="41.0" prefWidth="150.0" />
-      <Label fx:id="lbLevel" layoutX="53.0" layoutY="38.0" prefHeight="27.0" prefWidth="76.0" text="ウメモトレベル" />
+      <Label fx:id="lbLevel" layoutX="44.0" layoutY="58.0" prefHeight="27.0" prefWidth="76.0" text="ウメモトレベル" />
+      <ChoiceBox fx:id="cbLevel" layoutX="120.0" layoutY="61.0" prefWidth="150.0" />
+      <Label fx:id="lbSodanNaiyo" layoutX="44.0" layoutY="110.0" prefHeight="30.0" prefWidth="88.0" text="相談内容" />
+      <Button fx:id="btnSodan" layoutX="44.0" layoutY="276.0" mnemonicParsing="false" prefHeight="72.0" prefWidth="515.0" text="相談" />
+      <TextArea fx:id="txtAreaSodanNaiyo" layoutX="44.0" layoutY="140.0" prefHeight="122.0" prefWidth="515.0" />
    </children>
-</Pane>
+</AnchorPane>
